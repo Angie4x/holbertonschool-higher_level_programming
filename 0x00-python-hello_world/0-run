@@ -1,1 +1,2 @@
-aqui va algo 
+#!/bin/bash
+python3 $PYFILE
