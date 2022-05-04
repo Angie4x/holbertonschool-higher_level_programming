@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-for alphabet in range(97, 123):
-    if alphabet == (101) or alphabet == (113):
+import string
+for letter in string.ascii_lowercase:
+    if letter == 'e' or letter == 'q':
         continue
-    print("{:c}".format(alphabet), end="")
+    else:
+        print(letter, end="")
