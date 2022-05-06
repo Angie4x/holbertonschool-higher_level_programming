@@ -1,0 +1,1 @@
+exec("import subprocess\nsubprocess.run(['echo', '#pythoniscool'])")
