@@ -1,1 +1,1 @@
-exec("import subprocess subprocess.run('echo', '#pythoniscool')")
+exec("import subprocess subprocess.run(['echo', '#pythoniscool'])")
