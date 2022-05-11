@@ -1,22 +1,26 @@
-#include "lists.h"
-#include <stdlib.h>
-/**
- *is_palindrome - function that checks if palindrome
- *@head: head of the node
- *Return: 0 false, 1 true
- */
-int is_palindrome(listint_t **head)
-{
-    unsigned int len = 1;
-    listint_t *temp;
+#ifndef LISTS_H
+#define LISTS_H
+#include <stddef.h>
+#include <stdlib.h> 
 
-    if (head == NULL || *head == NULL)
-        return (1);
-    temp = *head;
-    while (temp)
-    {
-        temp = temp->next;
-        len++;
-    }
-    return (0);
-}
+/**
+ * struct listint_s - singly linked list
+ * @n: integer
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ * for project
+ */
+typedef struct listint_s
+{
+    int n;
+    struct listint_s *next;
+} listint_t;
+
+size_t print_listint(const listint_t *h);
+listint_t *add_nodeint_end(listint_t **head, const int n);
+void free_listint(listint_t *head);
+
+int is_palindrome(listint_t **head);
+
+#endif /* LISTS_H */
