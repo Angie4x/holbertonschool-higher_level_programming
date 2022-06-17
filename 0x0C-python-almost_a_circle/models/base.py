@@ -17,7 +17,7 @@ class Base:
 	else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-@staticmethod
+    @staticmethod
     def to_json_string(list_dictionaries):
 	"""adding the static method that                                        
          returns the list of the JSON string representation"""
@@ -29,7 +29,7 @@ class Base:
     def save_to_file(cls, list_objs):
 	""" adding the class method that writes the JSON                        
         string representation"""
-d = []
+        d = []
         file = cls.__name__+".json"
         if list_objs is None:
             with open(file, "w", encoding="utf-8") as f:
@@ -40,7 +40,8 @@ d = []
 
         with open(file, "w", encoding="utf-8")as f:
             f.write(cls.to_json_string(d))
-@staticmethod
+    
+    @staticmethod
     def from_json_string(json_string):
         if not isinstance(json_string, str):
 	    return []
