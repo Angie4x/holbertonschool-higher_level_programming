@@ -2,7 +2,6 @@
 
 const apiUrl = process.argv[2];
 const request = require('request');
-
 request(apiUrl, function (err, response, body) {
   if (err) console.log(err);
   else {
